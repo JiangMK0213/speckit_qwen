@@ -1,0 +1,6 @@
+export { default as InfoPanel } from './InfoPanel.vue'
+export { default as Legend } from './Legend.vue'
+export { default as LegendGroup } from './LegendGroup.vue'
+export { default as TimeDisplay } from './TimeDisplay.vue'
+export { default as ThemeSwitch } from './ThemeSwitch.vue'
+export { default as LocaleSetting } from './LocaleSetting.vue'

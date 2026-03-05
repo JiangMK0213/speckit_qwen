@@ -1,0 +1,61 @@
+// 颜色
+$primary-color: #409EFF;
+$gray-color: #909399;
+
+// 背景颜色
+$bg-color: var(--bg-color);
+$sider-bg: var(--sider-bg);
+$header-bg: var(--header-bg);
+$footer-bg: var(--footer-bg);
+$panel-bg: var(--panel-bg);
+$panel-header-bg: var(--panel-header-bg);
+
+// 按钮颜色
+$btn-bg: var(--btn-bg);
+$btn-hover-bg: var(--btn-hover-bg);
+$btn-active-bg: var(--btn-active-bg);
+
+// 文字颜色
+$text-color: var(--text-color);
+$text-color-regular: var(--text-color-regular);
+$text-color-secondary: var(--text-color-secondary);
+$text-color-active: var(--text-color-active);
+$text-color-light: var(--text-color-light);
+
+// 字体
+$header-title-font-size: 18px;
+$panel-title-font-size: 20px;
+
+// 间距基准单位
+$spacing-base: 4px !default;
+
+// 生成间距变量的函数
+@function spacing($multiplier) {
+  @return $spacing-base * $multiplier;
+}
+
+// 布局相关
+$header-height: 48px;
+$sider-width: 460px;
+$footer-height: 100px;
+$header-padding: 0 spacing(6);
+$sider-padding: spacing(5);
+$footer-padding: 0 spacing(6);
+$panel-header-height: 48px;
+$panel-header-padding: spacing(2) spacing(4);
+$panel-content-padding: spacing(5) spacing(4);
+
+// 圆角
+$border-radius: spacing(1);
+$border-radius-s: spacing(1);
+$border-radius-m: spacing(2);
+$border-radius-l: spacing(3);
+
+:root {
+  // 生成间距类
+  @for $i from 1 through 12 {
+    .p-#{$i} { padding: spacing($i); }
+    .m-#{$i} { margin: spacing($i); }
+    .gap-#{$i} { gap: spacing($i); }
+  }
+}

@@ -1,0 +1,24 @@
+@mixin theme {
+  // 颜色
+  --primary-color: #409EFF;
+
+  // 背景颜色
+  --bg-color: rgb(41, 44, 51);
+  --header-bg: rgba(41, 44, 51, 0.4);
+  --footer-bg: rgba(41, 44, 51, 0.4);
+  --sider-bg: rgba(41, 44, 51, 0.4);
+  --panel-bg: rgba(41, 44, 51, 0.4);
+  --panel-header-bg: rgba(41, 44, 51, 1);
+
+  // 按钮颜色
+  --btn-bg: rgba(41, 44, 51, 0.4);
+  --btn-hover-bg: rgba(172, 178, 192, 0.5);
+  --btn-active-bg: rgba(172, 178, 192, 0.8);
+
+  // 文字颜色
+  --text-color: #E5EAF3;
+  --text-color-regular: #CFD3DC;
+  --text-color-secondary: #A3A6AD;
+  --text-color-active: #000000;
+  --text-color-light: #E5EAF3;
+}

@@ -1,0 +1,48 @@
+description = "检查代码性能，包括执行时间分析、内存使用分析、代码复杂度分析，并提供优化建议。"
+
+prompt = """
+---
+description: 检查代码性能，包括执行时间分析、内存使用分析、代码复杂度分析，并提供优化建议。
+---
+
+## User Input
+
+```text
+$ARGUMENTS
+```
+
+You **MUST** consider the user input before proceeding (if not empty).
+
+## Goal
+
+Analyze code performance and provide optimization recommendations, including execution time analysis, memory usage analysis, code complexity analysis, and optimization suggestions.
+
+## Execution Steps
+
+1. **Analyze User Input**
+   - Understand the user's specific needs related to code performance analysis
+   - Identify any project-specific requirements or constraints
+
+2. **Load Code Performance Checker Skill Content**
+   - Load the content from `.trae/skills/code-performance-checker/SKILL.md`
+   - Use this content as the basis for providing code performance analysis
+
+3. **Generate Performance Analysis**
+   - Execution time analysis and bottleneck identification
+   - Memory usage analysis and leak detection
+   - Code complexity analysis
+   - Optimization recommendations
+
+4. **Customize for Project**
+   - Tailor the analysis to the specific project needs
+   - Address any project-specific requirements mentioned in the user input
+
+5. **Output Comprehensive Analysis**
+   - Provide a structured and detailed performance analysis report
+   - Include optimization suggestions and best practices
+   - Highlight important considerations for the project
+
+## Context
+
+{{args}}
+"""

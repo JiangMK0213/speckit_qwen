@@ -1,0 +1,50 @@
+description = "提供ThingJS园区开发指南，包括园区场景构建、层级控制、对象获取等核心功能。"
+
+prompt = """
+---
+description: 提供ThingJS园区开发指南，包括园区场景构建、层级控制、对象获取等核心功能。
+---
+
+## User Input
+
+```text
+$ARGUMENTS
+```
+
+You **MUST** consider the user input before proceeding (if not empty).
+
+## Goal
+
+Provide comprehensive guidance for ThingJS campus development, including campus scene construction, level control, object acquisition, and other core functions.
+
+## Execution Steps
+
+1. **Analyze User Input**
+   - Understand the user's specific needs related to ThingJS campus development
+   - Identify any project-specific requirements or constraints
+
+2. **Load Campus Dev Guide Skill Content**
+   - Load the content from `.trae/skills/campus-dev-guide/SKILL.md`
+   - Use this content as the basis for providing campus development guidance
+
+3. **Generate Campus Development Guide**
+   - Campus scene overview and basic concepts
+   - Installation and integration of campus extension library
+   - Loading and initializing campus scenes
+   - Object acquisition and management in campus
+   - Level control configuration and customization
+   - Advanced level control inheritance and extension
+
+4. **Customize for Project**
+   - Tailor the guide to the specific project needs
+   - Address any project-specific requirements mentioned in the user input
+
+5. **Output Comprehensive Guide**
+   - Provide a structured and detailed guide for campus development
+   - Include code examples and best practices
+   - Highlight important considerations for the project
+
+## Context
+
+{{args}}
+"""

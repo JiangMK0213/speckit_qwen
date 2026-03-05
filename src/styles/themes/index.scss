@@ -1,0 +1,16 @@
+@use './dark/index' as dark;
+@use './light/index' as light;
+
+// 主题名称变量 - 与 useTheme 中保持一致
+$dark-theme: 'dark';
+$light-theme: 'light';
+
+// 深色主题
+html.#{$dark-theme} {
+  @include dark.theme;
+}
+
+// 浅色主题
+html.#{$light-theme} {
+  @include light.theme;
+}

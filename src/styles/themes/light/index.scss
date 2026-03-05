@@ -1,0 +1,7 @@
+@use './variables' as vars;
+@use './element-plus' as el;
+
+@mixin theme {
+  @include vars.theme;
+  @include el.theme;
+}

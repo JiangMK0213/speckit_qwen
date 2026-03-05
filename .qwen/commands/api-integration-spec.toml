@@ -1,0 +1,49 @@
+description = "提供项目接口对接的规范和标准，包括RESTful API设计、接口对接流程、错误处理和安全规范。"
+
+prompt = """
+---
+description: 提供项目接口对接的规范和标准，包括RESTful API设计、接口对接流程、错误处理和安全规范。
+---
+
+## User Input
+
+```text
+$ARGUMENTS
+```
+
+You **MUST** consider the user input before proceeding (if not empty).
+
+## Goal
+
+Provide comprehensive API integration specifications and guidelines for the project, including RESTful API design, integration process, error handling, and security specifications.
+
+## Execution Steps
+
+1. **Analyze User Input**
+   - Understand the user's specific needs related to API integration
+   - Identify any project-specific requirements or constraints
+
+2. **Load API Integration Skill Content**
+   - Load the content from `.trae/skills/api-integration-spec/SKILL.md`
+   - Use this content as the basis for providing API integration specifications
+
+3. **Generate API Integration Specifications**
+   - RESTful API design principles and best practices
+   - API integration workflow and process
+   - Error handling and response formats
+   - Security specifications and best practices
+   - API configuration guidelines
+
+4. **Customize for Project**
+   - Tailor the specifications to the specific project needs
+   - Address any project-specific requirements mentioned in the user input
+
+5. **Output Comprehensive Guide**
+   - Provide a structured and detailed guide for API integration
+   - Include examples and best practices
+   - Highlight important considerations for the project
+
+## Context
+
+{{args}}
+"""

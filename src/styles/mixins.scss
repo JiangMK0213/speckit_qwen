@@ -1,0 +1,84 @@
+// 弹性布局
+@mixin flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+// 弹性布局居中
+@mixin flex-center($direction: row) {
+  @include flex($direction);
+  justify-content: center;
+  align-items: center;
+}
+
+// 弹性布局水平居中
+@mixin flex-x-center($direction: row) {
+  @include flex($direction);
+  justify-content: center;
+}
+
+// 弹性布局水平居中
+@mixin flex-y-center($direction: row) {
+  @include flex($direction);
+  align-items: center;
+}
+
+// 绝对定位
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// 毛玻璃效果
+@mixin glass-effect($blur: 50px, $bg-color: var(--panel-bg)) {
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  background-color: $bg-color;
+}
+
+// 文本溢出省略
+@mixin ellipsis($lines: 1) {
+  @if $lines == 1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// 滚动条样式
+@mixin scrollbar($width: 6px, $track-color: transparent, $thumb-color: rgba(0, 0, 0, 0.3)) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+    border-radius: $width / 2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: $width / 2;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+@mixin svg-icon-mask() {
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}

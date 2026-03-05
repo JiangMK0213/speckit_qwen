@@ -26,6 +26,7 @@
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.13.4",
+    "@types/three": "^0.183.1",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
     "@vitejs/plugin-vue": "^5.2.1",
@@ -40,6 +41,7 @@
     "rollup-plugin-visualizer": "^5.14.0",
     "sass": "^1.85.1",
     "sass-embedded": "^1.85.1",
+    "three": "^0.183.2",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
     "vite-plugin-ejs": "^1.7.0",

@@ -26,7 +26,7 @@
       <Sider>
         <!-- 图表 -->
         <div style="width: 100%; height: 300px;">
-          <BasicBar />
+          <BasicBar :data="[]" />
         </div>
       </Sider>
     </Layout>

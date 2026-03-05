@@ -1,17 +1,17 @@
 @mixin theme {
   // 颜色
-  --primary-color: #409EFF;
+  --primary-color: #409eff;
 
   // 背景颜色
   --bg-color: #f5f7fa;
-  --header-bg: rgba(245, 248, 255, 0.3);
-  --footer-bg: rgba(245, 248, 255, 0.3);
-  --sider-bg: rgba(245, 248, 255, 0.3);
-  --panel-bg: rgba(245, 248, 255, 0.3);
+  --header-bg: rgba(245, 248, 255, 0.9);
+  --footer-bg: rgba(245, 248, 255, 0.9);
+  --sider-bg: rgba(245, 248, 255, 0.9);
+  --panel-bg: rgba(245, 248, 255, 0.9);
   --panel-header-bg: rgba(245, 248, 255, 1);
 
   // 按钮颜色
-  --btn-bg: rgba(245, 248, 255, 0.3);
+  --btn-bg: rgba(245, 248, 255, 0.9);
   --btn-hover-bg: rgba(150, 153, 160, 0.8);
   --btn-active-bg: rgba(80, 83, 90, 1);
 

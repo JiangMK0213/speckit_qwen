@@ -1,49 +1,44 @@
-description = "提供ThingJS数字孪生项目初始化指南，包括App实例创建、场景加载、对象管理等核心功能。"
+name = "digital-twin-init"
+description = "提供ThingJS数字孪生项目初始化指南，包括App实例创建、场景加载、对象管理等核心功能。当用户需要初始化数字孪生项目时调用。"
 
-prompt = """
----
-description: 提供ThingJS数字孪生项目初始化指南，包括App实例创建、场景加载、对象管理等核心功能。
----
+[prompts]
 
-## User Input
+[prompts.system]
+content = "你是一个ThingJS数字孪生项目初始化专家，专注于帮助用户创建和配置ThingJS数字孪生项目。根据用户的需求，提供详细的初始化指南和最佳实践。"
 
-```text
-$ARGUMENTS
-```
+[prompts.user]
+content = "用户需要初始化ThingJS数字孪生项目，请根据以下文档提供详细的初始化指南：\n\n```\n{{files['.trae/skills/digital-twin-init/SKILL.md'].content}}\n```\n\n请根据用户的具体需求，提供相应的示例代码和使用建议。"
 
-You **MUST** consider the user input before proceeding (if not empty).
+[files]
 
-## Goal
+[files.inputs]
 
-Provide comprehensive guidance for initializing a ThingJS digital twin project, including App instance creation, scene loading, object management, and other core functions.
+[files.inputs.skill]
+path = ".trae/skills/digital-twin-init/SKILL.md"
 
-## Execution Steps
+[files.outputs]
 
-1. **Analyze User Input**
-   - Understand the user's specific needs related to digital twin project initialization
-   - Identify any project-specific requirements or constraints
+[files.outputs.response]
+path = "response.md"
 
-2. **Load Digital Twin Init Skill Content**
-   - Load the content from `.trae/skills/digital-twin-init/SKILL.md`
-   - Use this content as the basis for providing digital twin project initialization guidance
+[settings]
 
-3. **Generate Digital Twin Project Initialization Guide**
-   - App instance creation and configuration
-   - Scene loading and initialization
-   - Object management and manipulation
-   - Core functionality setup
-   - Best practices for digital twin projects
+[settings.params]
 
-4. **Customize for Project**
-   - Tailor the guide to the specific project needs
-   - Address any project-specific requirements mentioned in the user input
+[settings.params.model]
+value = "qwen2.5-72b-a16b"
 
-5. **Output Comprehensive Guide**
-   - Provide a structured and detailed guide for digital twin project initialization
-   - Include code examples and best practices
-   - Highlight important considerations for the project
+[settings.params.temperature]
+value = 0.3
 
-## Context
+[settings.params.max_tokens]
+value = 4096
 
-{{args}}
-"""
+[settings.params.top_p]
+value = 0.9
+
+[settings.params.frequency_penalty]
+value = 0.0
+
+[settings.params.presence_penalty]
+value = 0.0

@@ -1,0 +1,44 @@
+name = "campus-pipeline-creation"
+description = "提供ThingJS园区管线创建指南，包括PolygonLine的使用、参数配置、示例代码等。当用户需要在园区中创建管线时调用。"
+
+[prompts]
+
+[prompts.system]
+content = "你是一个ThingJS园区管线创建专家，专注于帮助用户在园区场景中创建各种类型的管线。根据用户的需求，提供详细的PolygonLine使用指南和示例代码。"
+
+[prompts.user]
+content = "用户需要在ThingJS园区场景中创建管线，请根据以下文档提供详细的创建指南：\n\n```\n{{files['.trae/skills/campus-pipeline-creation/SKILL.md'].content}}\n```\n\n请根据用户的具体需求，提供相应的示例代码和使用建议。"
+
+[files]
+
+[files.inputs]
+
+[files.inputs.skill]
+path = ".trae/skills/campus-pipeline-creation/SKILL.md"
+
+[files.outputs]
+
+[files.outputs.response]
+path = "response.md"
+
+[settings]
+
+[settings.params]
+
+[settings.params.model]
+value = "qwen2.5-72b-a16b"
+
+[settings.params.temperature]
+value = 0.3
+
+[settings.params.max_tokens]
+value = 4096
+
+[settings.params.top_p]
+value = 0.9
+
+[settings.params.frequency_penalty]
+value = 0.0
+
+[settings.params.presence_penalty]
+value = 0.0
